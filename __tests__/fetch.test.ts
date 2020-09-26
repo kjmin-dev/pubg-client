@@ -35,7 +35,10 @@ describe('player', () => {
         expect(res).toMatchObject(testPlayers)
     })
     it('search player by identifier', async () => {
-        const res = await fetch.player('steam', 'account.183bc4b2c3404935baf3d56fb434b393')
+        const res = await fetch.player(
+            'steam',
+            'account.183bc4b2c3404935baf3d56fb434b393',
+        )
         expect(res).toHaveProperty('data')
         expect(res).toMatchObject(testPlayer)
     })

@@ -19,9 +19,7 @@ class createInstance extends _fetcher {
 
     /* Find user by identifier */
     player(platform: string, userid: string): Promise<any> {
-        return this.get(
-            `/shards/${platform}/players/${userid}`,
-        )
+        return this.get(`/shards/${platform}/players/${userid}`)
     }
 }
 
