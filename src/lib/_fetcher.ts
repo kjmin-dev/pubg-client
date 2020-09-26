@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 import { RequestInit } from 'node-fetch'
 
-class fetcher {
+class _fetcher {
     private _prefix: string
     private _key: string
     private _default_opts: RequestInit
@@ -72,4 +72,4 @@ class fetcher {
     }
 }
 
-export default fetcher
+export default _fetcher
