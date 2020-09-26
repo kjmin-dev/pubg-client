@@ -28,7 +28,8 @@
         "lint": "eslint . --ext .ts,.tsx",
         "prettier": "prettier --write \"**/*.{js,ts,tsx,json}\" --no-semi",
         "test": "jest --coverage",
-        "test:watch": "jest --watch"
+        "test:watch": "jest --watch",
+        "precommit": "yarn prettier && yarn lint"
     },
     "author": "schnellehand <kjmin@kjmin.io>",
     "license": "MIT",
