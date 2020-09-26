@@ -1,0 +1,1198 @@
+{
+    "data": [
+        {
+            "type": "tournament",
+            "id": "sea-psms2",
+            "attributes": {
+                "createdAt": "2020-09-25T12:08:05Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pis3",
+            "attributes": {
+                "createdAt": "2020-09-25T07:52:57Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-dachs20",
+            "attributes": {
+                "createdAt": "2020-09-24T17:51:13Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sa-cpms3",
+            "attributes": {
+                "createdAt": "2020-09-23T22:36:51Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "oc-lp3pl",
+            "attributes": {
+                "createdAt": "2020-09-21T09:15:39Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pcs3kr",
+            "attributes": {
+                "createdAt": "2020-09-10T09:30:46Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-psl7",
+            "attributes": {
+                "createdAt": "2020-08-31T16:05:22Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pcs2gf",
+            "attributes": {
+                "createdAt": "2020-08-29T17:14:32Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pcs2ap",
+            "attributes": {
+                "createdAt": "2020-08-29T10:33:32Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pcs2gf",
+            "attributes": {
+                "createdAt": "2020-08-27T23:46:53Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pcs2as",
+            "attributes": {
+                "createdAt": "2020-08-27T10:50:53Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-lvup",
+            "attributes": {
+                "createdAt": "2020-08-24T04:58:46Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pis2",
+            "attributes": {
+                "createdAt": "2020-08-07T07:42:01Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pto20",
+            "attributes": {
+                "createdAt": "2020-08-06T12:46:53Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-chall2",
+            "attributes": {
+                "createdAt": "2020-08-06T00:28:37Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-psms1",
+            "attributes": {
+                "createdAt": "2020-08-04T12:56:41Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pcs2gs",
+            "attributes": {
+                "createdAt": "2020-08-02T16:41:02Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pps1",
+            "attributes": {
+                "createdAt": "2020-07-26T10:45:23Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pcs2gs",
+            "attributes": {
+                "createdAt": "2020-07-24T23:31:33Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pcs2kr",
+            "attributes": {
+                "createdAt": "2020-07-23T09:32:09Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sa-pmcs2",
+            "attributes": {
+                "createdAt": "2020-07-22T20:50:37Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-pcls20",
+            "attributes": {
+                "createdAt": "2020-07-19T07:42:20Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-ptsp3",
+            "attributes": {
+                "createdAt": "2020-07-17T12:32:14Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pvsf20",
+            "attributes": {
+                "createdAt": "2020-07-17T10:52:36Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pcl20",
+            "attributes": {
+                "createdAt": "2020-06-28T06:28:11Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pcs1as",
+            "attributes": {
+                "createdAt": "2020-06-26T10:42:05Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pcs1na",
+            "attributes": {
+                "createdAt": "2020-06-25T23:36:42Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pcs1ap",
+            "attributes": {
+                "createdAt": "2020-06-25T10:29:49Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-chall",
+            "attributes": {
+                "createdAt": "2020-06-10T23:39:54Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pcs1gs",
+            "attributes": {
+                "createdAt": "2020-06-09T15:01:04Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pcs1gf",
+            "attributes": {
+                "createdAt": "2020-06-05T23:30:43Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pis20",
+            "attributes": {
+                "createdAt": "2020-06-02T18:48:20Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "jp-pjs20",
+            "attributes": {
+                "createdAt": "2020-05-29T08:02:40Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sa-cpm20",
+            "attributes": {
+                "createdAt": "2020-05-27T22:34:33Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pcscsgf",
+            "attributes": {
+                "createdAt": "2020-05-26T16:39:27Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pcs1kr",
+            "attributes": {
+                "createdAt": "2020-05-18T02:57:33Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pcscsgf",
+            "attributes": {
+                "createdAt": "2020-05-16T21:37:35Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sa-superw",
+            "attributes": {
+                "createdAt": "2020-05-15T22:38:08Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pcscs",
+            "attributes": {
+                "createdAt": "2020-05-15T10:47:07Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pcscs",
+            "attributes": {
+                "createdAt": "2020-05-14T10:47:52Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pcscsq",
+            "attributes": {
+                "createdAt": "2020-05-09T21:41:18Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pcscsq2",
+            "attributes": {
+                "createdAt": "2020-05-09T21:41:11Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-dhs20gf",
+            "attributes": {
+                "createdAt": "2020-05-09T15:35:39Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-dhs20sf",
+            "attributes": {
+                "createdAt": "2020-05-02T15:35:29Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-lpt20",
+            "attributes": {
+                "createdAt": "2020-04-01T12:57:35Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-bws20",
+            "attributes": {
+                "createdAt": "2020-03-31T10:31:17Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pcls20",
+            "attributes": {
+                "createdAt": "2020-03-25T09:20:51Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pclps19",
+            "attributes": {
+                "createdAt": "2020-03-25T08:47:57Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-testq",
+            "attributes": {
+                "createdAt": "2020-03-04T13:37:31Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-glls4",
+            "attributes": {
+                "createdAt": "2020-02-29T08:55:39Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-psls5",
+            "attributes": {
+                "createdAt": "2020-02-28T15:47:37Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pssc20",
+            "attributes": {
+                "createdAt": "2020-02-28T10:42:11Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pss20",
+            "attributes": {
+                "createdAt": "2020-02-16T09:41:22Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "tw-pml20",
+            "attributes": {
+                "createdAt": "2020-02-07T11:35:17Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pvs20",
+            "attributes": {
+                "createdAt": "2020-02-07T11:28:15Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "tst-hsm",
+            "attributes": {
+                "createdAt": "2020-02-04T07:39:38Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sa-webedia",
+            "attributes": {
+                "createdAt": "2020-01-27T23:13:14Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pts20",
+            "attributes": {
+                "createdAt": "2020-01-17T12:52:13Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-bsc20",
+            "attributes": {
+                "createdAt": "2020-01-16T07:40:55Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-nr20",
+            "attributes": {
+                "createdAt": "2020-01-08T11:45:46Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "hpl-bnncob",
+            "attributes": {
+                "createdAt": "2019-12-30T14:18:03Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-osm19",
+            "attributes": {
+                "createdAt": "2019-12-21T08:45:27Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-bjs3",
+            "attributes": {
+                "createdAt": "2019-12-19T07:12:07Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-apl20",
+            "attributes": {
+                "createdAt": "2019-11-29T11:34:20Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pgcgf",
+            "attributes": {
+                "createdAt": "2019-11-24T01:52:02Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pgcsf",
+            "attributes": {
+                "createdAt": "2019-11-16T01:38:02Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pgcgr3",
+            "attributes": {
+                "createdAt": "2019-11-11T01:31:28Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pgcgr2",
+            "attributes": {
+                "createdAt": "2019-11-10T01:27:54Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-pgcgr1",
+            "attributes": {
+                "createdAt": "2019-11-09T01:33:30Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-qesl",
+            "attributes": {
+                "createdAt": "2019-11-01T03:28:19Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "tw-pmlp3",
+            "attributes": {
+                "createdAt": "2019-10-25T09:50:08Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-pgckq",
+            "attributes": {
+                "createdAt": "2019-10-19T07:03:57Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-pcmf",
+            "attributes": {
+                "createdAt": "2019-10-14T07:40:23Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sa-gll",
+            "attributes": {
+                "createdAt": "2019-10-01T22:42:51Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-mea",
+            "attributes": {
+                "createdAt": "2019-09-28T12:33:47Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-psc3",
+            "attributes": {
+                "createdAt": "2019-09-27T09:31:21Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-psc19",
+            "attributes": {
+                "createdAt": "2019-09-04T11:13:55Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pts19",
+            "attributes": {
+                "createdAt": "2019-09-02T08:27:39Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pps19",
+            "attributes": {
+                "createdAt": "2019-08-31T08:03:59Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pis19",
+            "attributes": {
+                "createdAt": "2019-08-30T12:58:51Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pms19",
+            "attributes": {
+                "createdAt": "2019-08-30T07:04:14Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-pssu19",
+            "attributes": {
+                "createdAt": "2019-08-30T06:21:06Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-eslm",
+            "attributes": {
+                "createdAt": "2019-08-26T15:55:34Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-con",
+            "attributes": {
+                "createdAt": "2019-08-20T15:49:13Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-pcls",
+            "attributes": {
+                "createdAt": "2019-08-17T06:05:16Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pnc19",
+            "attributes": {
+                "createdAt": "2019-08-09T09:11:22Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pnctest",
+            "attributes": {
+                "createdAt": "2019-07-29T07:20:21Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "th-met19",
+            "attributes": {
+                "createdAt": "2019-07-26T08:43:59Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-gllslam",
+            "attributes": {
+                "createdAt": "2019-07-19T15:04:33Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-glltest",
+            "attributes": {
+                "createdAt": "2019-07-18T11:49:34Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-banana",
+            "attributes": {
+                "createdAt": "2019-07-11T05:54:20Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "tw-pml",
+            "attributes": {
+                "createdAt": "2019-07-05T09:52:20Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-army",
+            "attributes": {
+                "createdAt": "2019-07-05T01:44:32Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "th-test",
+            "attributes": {
+                "createdAt": "2019-07-02T12:54:03Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "th-pml",
+            "attributes": {
+                "createdAt": "2019-07-02T11:57:58Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "tw-test",
+            "attributes": {
+                "createdAt": "2019-06-28T08:11:20Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sa-bbl",
+            "attributes": {
+                "createdAt": "2019-06-27T22:38:01Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-douyu",
+            "attributes": {
+                "createdAt": "2019-06-19T07:02:40Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "la-league",
+            "attributes": {
+                "createdAt": "2019-06-13T22:02:36Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "lpps19",
+            "attributes": {
+                "createdAt": "2019-06-07T23:15:08Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pvs19",
+            "attributes": {
+                "createdAt": "2019-06-07T11:42:55Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-npla",
+            "attributes": {
+                "createdAt": "2019-05-25T21:44:12Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "pkl-test",
+            "attributes": {
+                "createdAt": "2019-05-23T07:44:59Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "tw-19pmlp2",
+            "attributes": {
+                "createdAt": "2019-05-22T07:32:01Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pelc",
+            "attributes": {
+                "createdAt": "2019-05-20T14:58:50Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-bjm19",
+            "attributes": {
+                "createdAt": "2019-05-17T05:56:58Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-cup",
+            "attributes": {
+                "createdAt": "2019-04-30T10:30:46Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-pcl",
+            "attributes": {
+                "createdAt": "2019-04-29T08:18:59Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-afm",
+            "attributes": {
+                "createdAt": "2019-04-22T08:49:52Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-fgs",
+            "attributes": {
+                "createdAt": "2019-04-16T11:50:59Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-pclp",
+            "attributes": {
+                "createdAt": "2019-04-08T05:24:36Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-vnlpt",
+            "attributes": {
+                "createdAt": "2019-04-05T10:08:43Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-pglt",
+            "attributes": {
+                "createdAt": "2019-04-02T11:24:17Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-champ",
+            "attributes": {
+                "createdAt": "2019-03-22T11:03:08Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pel",
+            "attributes": {
+                "createdAt": "2019-03-21T17:43:01Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-pdl",
+            "attributes": {
+                "createdAt": "2019-03-20T11:27:48Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-test",
+            "attributes": {
+                "createdAt": "2019-03-18T18:29:55Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "oce-esl",
+            "attributes": {
+                "createdAt": "2019-03-15T03:18:38Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-banana",
+            "attributes": {
+                "createdAt": "2019-03-01T04:48:00Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-ppe",
+            "attributes": {
+                "createdAt": "2019-02-28T03:54:34Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "region-pdl",
+            "attributes": {
+                "createdAt": "2019-02-26T06:33:33Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "psc-as",
+            "attributes": {
+                "createdAt": "2019-02-25T14:35:40Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-nplr",
+            "attributes": {
+                "createdAt": "2019-02-23T01:45:05Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pelc19",
+            "attributes": {
+                "createdAt": "2019-02-21T17:36:00Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-pkl19",
+            "attributes": {
+                "createdAt": "2019-02-11T09:38:02Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-pkc19",
+            "attributes": {
+                "createdAt": "2019-02-09T02:37:54Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "nplc-p1",
+            "attributes": {
+                "createdAt": "2019-02-06T01:31:38Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-npl",
+            "attributes": {
+                "createdAt": "2019-02-02T01:52:23Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "pai18",
+            "attributes": {
+                "createdAt": "2019-01-03T12:16:44Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "paitest",
+            "attributes": {
+                "createdAt": "2018-12-26T07:26:35Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-wegl",
+            "attributes": {
+                "createdAt": "2018-12-19T12:32:07Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "pel18",
+            "attributes": {
+                "createdAt": "2018-12-11T22:24:48Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pel18",
+            "attributes": {
+                "createdAt": "2018-12-11T20:42:19Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-pql",
+            "attributes": {
+                "createdAt": "2018-12-10T08:22:09Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-glls3",
+            "attributes": {
+                "createdAt": "2018-12-07T16:44:14Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-gll2",
+            "attributes": {
+                "createdAt": "2018-12-06T14:21:12Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-pcpi2",
+            "attributes": {
+                "createdAt": "2018-11-17T07:02:37Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-s2ab",
+            "attributes": {
+                "createdAt": "2018-11-16T11:24:56Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-pcpis2",
+            "attributes": {
+                "createdAt": "2018-11-13T09:07:42Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cn-prso2",
+            "attributes": {
+                "createdAt": "2018-11-09T14:03:43Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-eswc18",
+            "attributes": {
+                "createdAt": "2018-10-28T10:38:10Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-seac",
+            "attributes": {
+                "createdAt": "2018-10-26T15:49:16Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-thc",
+            "attributes": {
+                "createdAt": "2018-10-25T14:36:49Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pgw18-4",
+            "attributes": {
+                "createdAt": "2018-10-25T11:17:44Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pgw18",
+            "attributes": {
+                "createdAt": "2018-10-24T21:10:49Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "hk-ees",
+            "attributes": {
+                "createdAt": "2018-10-16T10:21:54Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pglfall",
+            "attributes": {
+                "createdAt": "2018-10-11T11:54:30Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-huya",
+            "attributes": {
+                "createdAt": "2018-10-05T14:41:15Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-pkl18",
+            "attributes": {
+                "createdAt": "2018-10-01T11:03:32Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "tw-mpls2",
+            "attributes": {
+                "createdAt": "2018-09-27T11:41:36Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-imba",
+            "attributes": {
+                "createdAt": "2018-09-20T12:56:17Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "jp-pjs18",
+            "attributes": {
+                "createdAt": "2018-09-14T08:13:24Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "br-pax",
+            "attributes": {
+                "createdAt": "2018-08-31T21:19:14Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "as-sls2",
+            "attributes": {
+                "createdAt": "2018-08-30T13:42:47Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-osm18",
+            "attributes": {
+                "createdAt": "2018-08-25T08:52:04Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-sls2",
+            "attributes": {
+                "createdAt": "2018-08-24T21:35:08Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pucc",
+            "attributes": {
+                "createdAt": "2018-08-23T09:43:23Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-geman",
+            "attributes": {
+                "createdAt": "2018-08-22T10:34:51Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-kcm18s1",
+            "attributes": {
+                "createdAt": "2018-08-16T07:02:49Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-glls2",
+            "attributes": {
+                "createdAt": "2018-08-11T17:14:34Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "pgi2018_fpp",
+            "attributes": {
+                "createdAt": "2018-07-28T10:32:42Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "na-ppc",
+            "attributes": {
+                "createdAt": "2018-07-12T16:19:06Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "eu-pgiq18",
+            "attributes": {
+                "createdAt": "2018-06-28T13:17:16Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-pgiq18",
+            "attributes": {
+                "createdAt": "2018-06-23T05:42:32Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "oc-pgiq18",
+            "attributes": {
+                "createdAt": "2018-06-22T00:00:00Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "sea-th-q18",
+            "attributes": {
+                "createdAt": "2018-06-21T09:47:44Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "cis-pgiq18",
+            "attributes": {
+                "createdAt": "2018-06-20T16:46:33Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-apl18s2",
+            "attributes": {
+                "createdAt": "2018-06-15T07:21:54Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "jp-pjs18s1",
+            "attributes": {
+                "createdAt": "2018-06-14T14:22:21Z"
+            }
+        },
+        {
+            "type": "tournament",
+            "id": "kr-pwm18s1",
+            "attributes": {
+                "createdAt": "2018-06-13T15:38:29Z"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://api.pubg.com/tournaments"
+    },
+    "meta": {}
+}
