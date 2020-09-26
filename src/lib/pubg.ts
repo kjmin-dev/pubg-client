@@ -1,8 +1,30 @@
 import _fetcher from './_fetcher'
 
+interface builder {
+    seasons(): Promise<any>
+    players(username: string): Promise<any>
+    player(userid: string): Promise<any>
+}
+
 class createInstance extends _fetcher {
     constructor(newKey = '') {
         super(newKey)
+    }
+
+    /* Functional builder */
+    public platform(_platform: string): builder {
+        const context = this
+        return {
+            seasons() {
+                return context.seasons(_platform)
+            },
+            players(username: string) {
+                return context.players(_platform, username)
+            },
+            player(userid: string) {
+                return context.player(_platform, userid)
+            },
+        }
     }
 
     /* Get all seasons */
