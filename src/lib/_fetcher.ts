@@ -62,24 +62,6 @@ class _fetcher {
             await fetch(this._prefix + url, { ...opts, ...this._default_opts })
         ).json()
     }
-
-    async post(url: string, opts?: RequestInit): Promise<any> {
-        return (
-            await fetch(this._prefix + url, { ...opts, ...this._default_opts })
-        ).json()
-    }
-
-    async put(url: string, opts?: RequestInit): Promise<any> {
-        return (
-            await fetch(this._prefix + url, { ...opts, ...this._default_opts })
-        ).json()
-    }
-
-    async del(url: string, opts?: RequestInit): Promise<any> {
-        return (
-            await fetch(this._prefix + url, { ...opts, ...this._default_opts })
-        ).json()
-    }
 }
 
 export default _fetcher
