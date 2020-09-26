@@ -5,13 +5,13 @@ class fetcher {
     private _prefix: string
     private _key: string
     private _default_opts: RequestInit
-    
-    constructor(newPrefix = "https://api.pubg.com") {
+
+    constructor(newPrefix = 'https://api.pubg.com') {
         this.prefix = newPrefix
         this._default_opts = {}
     }
-    
-    get prefix():string {
+
+    get prefix(): string {
         return this._prefix
     }
 
@@ -19,7 +19,7 @@ class fetcher {
         this._prefix = newPrefix
     }
 
-    get key():string {
+    get key(): string {
         return this._key
     }
 
@@ -29,12 +29,12 @@ class fetcher {
             ...this._default_opts,
             headers: {
                 Authorization: `Bearer ${newKey}`,
-                Accept: "application/vnd.api+json"
-            }
+                Accept: 'application/vnd.api+json',
+            },
         }
     }
-    
-    get default_opts():RequestInit {
+
+    get default_opts(): RequestInit {
         return this._default_opts
     }
 
@@ -43,19 +43,27 @@ class fetcher {
     }
 
     async get(url: string, opts?: RequestInit): Promise<any> {
-        return (await fetch(this._prefix + url, { ...opts, ...this._default_opts })).json()
+        return (
+            await fetch(this._prefix + url, { ...opts, ...this._default_opts })
+        ).json()
     }
-    
-    async post(url: string , opts?: RequestInit): Promise<any> {
-        return (await fetch(this._prefix + url, { ...opts, ...this._default_opts })).json()
+
+    async post(url: string, opts?: RequestInit): Promise<any> {
+        return (
+            await fetch(this._prefix + url, { ...opts, ...this._default_opts })
+        ).json()
     }
-    
-    async put(url: string , opts?: RequestInit): Promise<any> {
-        return (await fetch(this._prefix + url, { ...opts, ...this._default_opts })).json()
+
+    async put(url: string, opts?: RequestInit): Promise<any> {
+        return (
+            await fetch(this._prefix + url, { ...opts, ...this._default_opts })
+        ).json()
     }
-    
-    async del(url: string , opts?: RequestInit): Promise<any> {
-        return (await fetch(this._prefix + url, { ...opts, ...this._default_opts })).json()
+
+    async del(url: string, opts?: RequestInit): Promise<any> {
+        return (
+            await fetch(this._prefix + url, { ...opts, ...this._default_opts })
+        ).json()
     }
 }
 

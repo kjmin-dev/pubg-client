@@ -3,15 +3,9 @@
         {
             "type": "player",
             "id": "account.183bc4b2c3404935baf3d56fb434b393",
-            "attributes": [
-                null
-            ],
-            "relationships": [
-                null
-            ],
-            "links": [
-                null
-            ]
+            "attributes": [null],
+            "relationships": [null],
+            "links": [null]
         }
     ],
     "links": {
