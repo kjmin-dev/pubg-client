@@ -1,28 +1,5 @@
 import _fetcher from './_fetcher'
 
-interface Builder_season {
-    stat(userid: string): Promise<any>
-    rankedStat(userid: string): Promise<any>
-    leaderboards(gameMode: GameMode): Promise<any>
-}
-
-interface Builder_user {
-    json(): Promise<any>
-    weapon(): Promise<any>
-    stat(seasonid: string): Promise<any>
-    rankedStat(seasonid: string): Promise<any>
-}
-
-interface Builder_platform {
-    season(_seasonid: string): Builder_season
-    user(_userid: string): Builder_user
-    seasons(): Promise<any>
-    players(username: string): Promise<any>
-    player(userid: string): Promise<any>
-    lifetime(userid: string): Promise<any>
-    match(matchid: string): Promise<any>
-}
-
 type BigPlatform = 'steam' | 'console' | 'kakao'
 
 type Platform =
@@ -35,7 +12,7 @@ type Platform =
     | 'console' //PS4/Xbox (used for the /matches and /samples endpoints)
 
 type Region =
-    | 'pc-as'
+    | 'pc-as' // PC
     | 'pc-eu'
     | 'pc-jp'
     | 'pc-kakao'
@@ -46,11 +23,11 @@ type Region =
     | 'pc-sa'
     | 'pc-sea'
     | 'pc-tournament'
-    | 'psn-as'
+    | 'psn-as' // ps4
     | 'psn-eu'
     | 'psn-na'
     | 'psn-oc'
-    | 'xbox-as'
+    | 'xbox-as' // xbox
     | 'xbox-eu'
     | 'xbox-na'
     | 'xbox-oc'
@@ -64,77 +41,55 @@ type GameMode =
     | 'squad' //more than 2 people per team, third person perspective
     | 'squad-fpp' //more than 2 people per team, first person perspective
 
-class createInstance extends _fetcher {
+interface API {
+    players(platform: Platform, username: string): Promise<any>
+    player(platform: Platform, userid: string): Promise<any>
+    seasons(platform: Platform): Promise<string>
+    lifetime(platform: Platform, userid: string): Promise<any>
+    stat(platform: Platform, userid: string, seasonid: string): Promise<any>
+    rankedStat(
+        platform: Platform,
+        userid: string,
+        seasonid: string,
+    ): Promise<any>
+    weapon(platform: Platform, userid: string): Promise<any>
+    match(platform: Platform, matchid: string): Promise<any>
+    leaderboards(
+        platform: Platform | Region,
+        seasonid: string,
+        gameMode: GameMode,
+    ): Promise<any>
+    tournaments(tid: string): Promise<any>
+    samples(platform: BigPlatform): Promise<any>
+    status(): Promise<any>
+}
+
+interface API_Season {
+    stat(userid: string): Promise<any>
+    rankedStat(userid: string): Promise<any>
+    leaderboards(gameMode: GameMode): Promise<any>
+}
+
+interface API_User {
+    json(): Promise<any>
+    weapon(): Promise<any>
+    stat(seasonid: string): Promise<any>
+    rankedStat(seasonid: string): Promise<any>
+}
+
+interface API_Platform {
+    season(_seasonid: string): API_Season
+    user(_userid: string): API_User
+    seasons(): Promise<any>
+    players(username: string): Promise<any>
+    player(userid: string): Promise<any>
+    lifetime(userid: string): Promise<any>
+    match(matchid: string): Promise<any>
+}
+
+class createInstance extends _fetcher implements API {
     constructor(newKey = '') {
         super(newKey)
-    }
-
-    /* Functional builder */
-    public platform(_platform: Platform): Builder_platform {
-        const context = this
-        return {
-            season(_seasonid: string): Builder_season {
-                return {
-                    // platform().seasons().stat()
-                    stat(userid: string) {
-                        return context.stat(_platform, userid, _seasonid)
-                    },
-                    // platform().seasons().rankedStat()
-                    rankedStat(userid: string) {
-                        return context.rankedStat(_platform, userid, _seasonid)
-                    },
-                    // platform().seasons().leaderboards()
-                    leaderboards(gameMode: GameMode) {
-                        return context.leaderboards(
-                            _platform,
-                            _seasonid,
-                            gameMode,
-                        )
-                    },
-                }
-            },
-            user(_userid: string): Builder_user {
-                return {
-                    /**
-                     * platform().user().json()
-                     * returns api.player(userid)
-                     */
-                    json() {
-                        return context.player(_platform, _userid)
-                    },
-                    // platform().user().stat()
-                    stat(seasonid: string) {
-                        return context.stat(_platform, _userid, seasonid)
-                    },
-                    // platform().user().rankedStat()
-                    rankedStat(seasonid: string) {
-                        return context.rankedStat(_platform, _userid, seasonid)
-                    },
-                    weapon() {
-                        return context.weapon(_platform, _userid)
-                    },
-                }
-            },
-            // platform().seasons()
-            seasons() {
-                return context.seasons(_platform)
-            },
-            // platform().players()
-            players(username: string) {
-                return context.players(_platform, username)
-            },
-            // platform().player()
-            player(userid: string) {
-                return context.player(_platform, userid)
-            },
-            // platform().lifetime()
-            lifetime(userid: string) {
-                return context.lifetime(_platform, userid)
-            },
-            match(matchid: string) {
-                return context.match(_platform, matchid)
-            },
-        }
     }
 
     /**
@@ -259,6 +214,80 @@ class createInstance extends _fetcher {
      */
     status(): Promise<any> {
         return this.get(`/status`)
+    }
+
+    /**
+     * Functional builder
+     *  */
+    /* entry: platform() */
+    public platform(_platform: Platform): API_Platform {
+        const context = this
+        return {
+            // platform().seasons()
+            seasons() {
+                return context.seasons(_platform)
+            },
+            // platform().players()
+            players(username: string) {
+                return context.players(_platform, username)
+            },
+            // platform().player()
+            player(userid: string) {
+                return context.player(_platform, userid)
+            },
+            // platform().lifetime()
+            lifetime(userid: string) {
+                return context.lifetime(_platform, userid)
+            },
+            match(matchid: string) {
+                return context.match(_platform, matchid)
+            },
+
+            /* entry: playform().season() */
+            season(_seasonid: string): API_Season {
+                return {
+                    // platform().seasons().stat()
+                    stat(userid: string) {
+                        return context.stat(_platform, userid, _seasonid)
+                    },
+                    // platform().seasons().rankedStat()
+                    rankedStat(userid: string) {
+                        return context.rankedStat(_platform, userid, _seasonid)
+                    },
+                    // platform().seasons().leaderboards()
+                    leaderboards(gameMode: GameMode) {
+                        return context.leaderboards(
+                            _platform,
+                            _seasonid,
+                            gameMode,
+                        )
+                    },
+                }
+            },
+            // entry: platform().user()
+            user(_userid: string): API_User {
+                return {
+                    /**
+                     * platform().user().json()
+                     * returns api.player(userid)
+                     */
+                    json() {
+                        return context.player(_platform, _userid)
+                    },
+                    // platform().user().stat()
+                    stat(seasonid: string) {
+                        return context.stat(_platform, _userid, seasonid)
+                    },
+                    // platform().user().rankedStat()
+                    rankedStat(seasonid: string) {
+                        return context.rankedStat(_platform, _userid, seasonid)
+                    },
+                    weapon() {
+                        return context.weapon(_platform, _userid)
+                    },
+                }
+            },
+        }
     }
 }
 

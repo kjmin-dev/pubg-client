@@ -1,0 +1,187 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>pubg-client</title>
+	<meta name="description" content="Documentation for pubg-client">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">pubg-client</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>pubg-client</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<p>[<img src="https://img.shields.io/badge/TypeScript-4.0-blue.svg" alt="TypeScript version">][typescript-4-0]
+					[![Node.js version][nodejs-badge]][nodejs]
+				[![][license-badge]][license]</p>
+				<a href="#pubg-client" id="pubg-client" style="color: inherit; text-decoration: none;">
+					<h1>pubg-client</h1>
+				</a>
+				<p>🚀 A TypeScript wrapper for official [PUBG API][pubg_api]</p>
+				<p>👩🏻‍💻 This project was setup by [node-typescript-boilerplate][repo-template]</p>
+				<p>🌟 pubg-client offers:</p>
+				<ul>
+					<li>[Promise][promise] based API</li>
+					<li>All of [PUBG API][pubg_api] except [Telemetry][pubg_api_telemetry]</li>
+				</ul>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h1>Installation</h1>
+				</a>
+				<p>To start, just install the <code>pubg-client</code> into your node.js project.</p>
+				<p>use npm</p>
+				<pre><code class="language-sh">npm install pubg-client</code></pre>
+				<p>or yarn</p>
+				<pre><code class="language-sh">yarn add pubg-client</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h1>Usage</h1>
+				</a>
+				<p>You can import <code>pubg-client</code> module in two ways:</p>
+				<ol>
+					<li>import the module and set api key<pre><code class="language-javascript"> <span class="hljs-keyword">import</span> api <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;pubg-client&#x27;</span>;
+ <span class="hljs-comment">// or const api = require(&#x27;pubg-client&#x27;).default;</span>
+ api.key = <span class="hljs-string">&#x27;your_api_key&#x27;</span>;</code></pre>
+					</li>
+					<li>create new instance<pre><code class="language-javascript"> <span class="hljs-keyword">import</span> { createInstance } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;pubg-client&#x27;</span>;
+ <span class="hljs-comment">// or const { createInstance } = require(&#x27;pubg-client&#x27;);</span>
+ <span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> createInstance(<span class="hljs-string">&#x27;your_api_key&#x27;</span>);</code></pre>
+					To start, just click the <strong>[Use template][repo-template-action]</strong> link (or the green button). Now start adding your code in the <code>src</code> and unit tests in the <code>__tests__</code> directories.</li>
+				</ol>
+				<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
+					<h1>API Documentation</h1>
+				</a>
+				<p>see <a href="https://github.com/schnellehand/pubg-client/tree/master/doc/index.html">Generated document</a></p>
+				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
+					<h1>Development</h1>
+				</a>
+				<p>🏃🏽 pubg-client library was developed by using:</p>
+				<ul>
+					<li>[TypeScript][typescript] [4.0][typescript-4-0]</li>
+					<li>[ESLint][eslint] with some initial rules recommendation</li>
+					<li>[Jest][jest] for fast unit testing and code coverage</li>
+					<li>Type definitions for Node.js and Jest</li>
+					<li>[Prettier][prettier] to enforce consistent code style</li>
+					<li>Simple example of TypeScript code and unit test</li>
+					<li>.editorconfig for consistent file format</li>
+				</ul>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>Licensed under the APLv2. See the [LICENSE][license] file for details.</p>
+				<p>[nodejs-badge]: <a href="https://img.shields.io/badge/Node.js-&gt;=%2012.13-blue.svg">https://img.shields.io/badge/Node.js-&gt;=%2012.13-blue.svg</a>
+					[nodejs]: <a href="https://nodejs.org/dist/latest-v12.x/docs/api/">https://nodejs.org/dist/latest-v12.x/docs/api/</a>
+					[typescript]: <a href="https://www.typescriptlang.org/">https://www.typescriptlang.org/</a>
+					[typescript-4-0]: <a href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-0.html">https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-0.html</a>
+					[license-badge]: <a href="https://img.shields.io/badge/license-APLv2-blue.svg">https://img.shields.io/badge/license-APLv2-blue.svg</a>
+					[license]: <a href="https://github.com/schnellehand/pubg-client/blob/master/LICENSE">https://github.com/schnellehand/pubg-client/blob/master/LICENSE</a>
+					[jest]: <a href="https://facebook.github.io/jest/">https://facebook.github.io/jest/</a>
+					[eslint]: <a href="https://github.com/eslint/eslint">https://github.com/eslint/eslint</a>
+					[prettier]: <a href="https://prettier.io">https://prettier.io</a>
+					[repo-template]: <a href="https://github.com/jsynowiec/node-typescript-boilerplate">https://github.com/jsynowiec/node-typescript-boilerplate</a>
+					[promise]: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise</a>
+					[pubg_api]: <a href="https://documentation.pubg.com/en/introduction.html">https://documentation.pubg.com/en/introduction.html</a>
+					[pubg_api_request]: <a href="https://documentation.pubg.com/en/making-requests.html">https://documentation.pubg.com/en/making-requests.html</a>
+					[pubg_api_lifetime]: <a href="https://documentation.pubg.com/en/lifetime-stats.html">https://documentation.pubg.com/en/lifetime-stats.html</a>
+				[pubg_api_telemetry]: <a href="https://documentation.pubg.com/en/telemetry.html">https://documentation.pubg.com/en/telemetry.html</a></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_index_.html">&quot;index&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_lib__fetcher_.html">&quot;lib/_<wbr>fetcher&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_lib_pubg_.html">&quot;lib/pubg&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

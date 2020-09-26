@@ -13,7 +13,7 @@ class _fetcher {
             headers: {
                 Authorization: `Bearer ${newKey}`,
                 Accept: 'application/vnd.api+json',
-                'Accept-Encoding': ''
+                'Accept-Encoding': '',
             },
         }
     }
@@ -25,7 +25,7 @@ class _fetcher {
     set gzip(use: boolean) {
         this._default_opts.headers['Accept-Encoding'] = use ? 'gzip' : ''
     }
-    
+
     get prefix(): string {
         return this._prefix
     }
