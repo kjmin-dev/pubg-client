@@ -46,7 +46,7 @@ describe('player', () => {
 
 describe('seasons', () => {
     it('seasons returned data', async () => {
-        const res = await fetch.seasons()
+        const res = await fetch.seasons('steam')
         expect(res).toHaveProperty('data')
         expect(Array.isArray(res.data)).toBe(true)
     })

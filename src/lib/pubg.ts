@@ -6,8 +6,8 @@ class createInstance extends _fetcher {
     }
 
     /* Get all seasons */
-    seasons(): Promise<any> {
-        return this.get('/shards/pc-krjp/seasons')
+    seasons(platform: string): Promise<any> {
+        return this.get(`/shards/${platform}/seasons`)
     }
 
     /* Find users fy name */
