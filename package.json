@@ -1,7 +1,7 @@
 {
-    "name": "pubgapi",
+    "name": "pubg-client",
     "version": "0.0.0",
-    "description": "A simply wrapped version of the PUBG API",
+    "description": "A typescript wrapper for official PUBG API",
     "engines": {
         "node": ">= 12"
     },
