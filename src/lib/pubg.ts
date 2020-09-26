@@ -1,6 +1,6 @@
-import fetcher from './fetcher'
+import _fetcher from './_fetcher'
 
-class createInstance extends fetcher {
+class createInstance extends _fetcher {
     constructor(newKey = '') {
         super(newKey)
     }

@@ -8,6 +8,7 @@ class _fetcher {
 
     constructor(newKey: string) {
         this._key = newKey
+        this._prefix = 'https://api.pubg.com'
         this._default_opts = {
             headers: {
                 Authorization: `Bearer ${newKey}`,
