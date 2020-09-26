@@ -6,13 +6,22 @@ interface builder {
     player(userid: string): Promise<any>
 }
 
+type Platform =
+    | 'kakao'
+    | 'stadia'
+    | 'steam'
+    | 'tournament' //Tournaments
+    | 'psn' //PS4
+    | 'xbox'
+    | 'console' //PS4/Xbox (used for the /matches and /samples endpoints)
+
 class createInstance extends _fetcher {
     constructor(newKey = '') {
         super(newKey)
     }
 
     /* Functional builder */
-    public platform(_platform: string): builder {
+    public platform(_platform: Platform): builder {
         const context = this
         return {
             seasons() {
@@ -28,19 +37,19 @@ class createInstance extends _fetcher {
     }
 
     /* Get all seasons */
-    seasons(platform: string): Promise<any> {
+    seasons(platform: Platform): Promise<any> {
         return this.get(`/shards/${platform}/seasons`)
     }
 
     /* Find users fy name */
-    players(platform: string, username: string): Promise<any> {
+    players(platform: Platform, username: string): Promise<any> {
         return this.get(
             `/shards/${platform}/players?filter[playerNames]=${username}`,
         )
     }
 
     /* Find user by identifier */
-    player(platform: string, userid: string): Promise<any> {
+    player(platform: Platform, userid: string): Promise<any> {
         return this.get(`/shards/${platform}/players/${userid}`)
     }
 }
