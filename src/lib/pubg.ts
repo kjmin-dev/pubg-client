@@ -1,7 +1,7 @@
 import fetcher from './fetcher'
 
 class createInstance extends fetcher {
-    constructor(newKey = "") {
+    constructor(newKey = '') {
         super(newKey)
     }
 

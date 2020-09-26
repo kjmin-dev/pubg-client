@@ -18,7 +18,7 @@ describe('prefix and key', () => {
 describe('craete instance', () => {
     it('no parameter', () => {
         const instance = new createInstance()
-        expect(instance.key).toBe("")
+        expect(instance.key).toBe('')
     })
     it('with key', () => {
         const instance = new createInstance(api.key)

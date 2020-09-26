@@ -6,7 +6,7 @@ class fetcher {
     private _key: string
     private _default_opts: RequestInit
 
-    constructor(newKey:string) {
+    constructor(newKey: string) {
         this._key = newKey
         this._default_opts = {
             headers: {
