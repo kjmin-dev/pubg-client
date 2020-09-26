@@ -1,6 +1,7 @@
 import fetch, { createInstance } from '../src'
 import api from './constant/api.json'
 import testPlayer from './example/player-platform.json'
+import testPlayers from './example/players-platform.json'
 
 describe('prefix and key', () => {
     it('set prefix', () => {
@@ -27,10 +28,15 @@ describe('craete instance', () => {
 })
 
 describe('player', () => {
-    it('search player returned data', async () => {
+    it('search players by name', async () => {
         const res = await fetch.players('steam', 'leichtjoon')
         expect(res).toHaveProperty('data')
         expect(Array.isArray(res.data)).toBe(true)
+        expect(res).toMatchObject(testPlayers)
+    })
+    it('search player by identifier', async () => {
+        const res = await fetch.player('steam', 'account.183bc4b2c3404935baf3d56fb434b393')
+        expect(res).toHaveProperty('data')
         expect(res).toMatchObject(testPlayer)
     })
 })

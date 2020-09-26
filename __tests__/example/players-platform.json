@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "type": "player",
+            "id": "account.183bc4b2c3404935baf3d56fb434b393",
+            "attributes": {
+                "name": "leichtjoon",
+                "stats": null,
+                "titleId": "bluehole-pubg",
+                "shardId": "steam",
+                "patchVersion": ""
+            },
+            "relationships": {
+                "assets": {
+                    "data": []
+                }
+            },
+            "links": {
+                "self": "https://api.playbattlegrounds.com/shards/steam/players/account.183bc4b2c3404935baf3d56fb434b393",
+                "schema": ""
+            }
+        }
+    ],
+    "links": {
+        "self": "https://api.pubg.com/shards/steam/players?filter[playerNames]=leichtjoon"
+    },
+    "meta": {}
+}

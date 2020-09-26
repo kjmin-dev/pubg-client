@@ -5,13 +5,22 @@ class createInstance extends _fetcher {
         super(newKey)
     }
 
+    /* Get all seasons */
     seasons(): Promise<any> {
         return this.get('/shards/pc-krjp/seasons')
     }
 
+    /* Find users fy name */
     players(platform: string, username: string): Promise<any> {
         return this.get(
             `/shards/${platform}/players?filter[playerNames]=${username}`,
+        )
+    }
+
+    /* Find user by identifier */
+    player(platform: string, userid: string): Promise<any> {
+        return this.get(
+            `/shards/${platform}/players/${userid}`,
         )
     }
 }
