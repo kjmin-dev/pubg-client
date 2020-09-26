@@ -7,7 +7,7 @@ import testPlayers from './example/players-platform.json'
 import tournaments from './example/tournaments.json'
 import samples from './example/samples.json'
 
-describe('prefix and key', () => {
+describe('Environments', () => {
     it('set prefix', () => {
         fetch.prefix = api.prefix
         expect(fetch.prefix).toBe(api.prefix)
@@ -18,9 +18,14 @@ describe('prefix and key', () => {
         expect(fetch.checkKey()).toBe(true)
         expect(fetch.default_opts).toHaveProperty('headers')
     })
+    it('set gzip response', () => {
+        expect(fetch.gzip).toBe(false)
+        fetch.gzip = true
+        expect(fetch.gzip).toBe(true)
+    })
 })
 
-describe('craete instance', () => {
+describe('Craete instance', () => {
     it('no parameter', () => {
         const instance = new createInstance()
         expect(instance.key).toBe('')
@@ -31,7 +36,7 @@ describe('craete instance', () => {
     })
 })
 
-describe('player', () => {
+describe('Player', () => {
     it('search players by name', async () => {
         //const res = await fetch.players('steam', 'leichtjoon')
         const res = await fetch.platform('steam').players('leichtjoon')
@@ -52,7 +57,7 @@ describe('player', () => {
     })
 })
 
-describe('seasons', () => {
+describe('Seasons', () => {
     it('seasons returned data', async () => {
         const res = await fetch.seasons('steam')
         expect(res).toHaveProperty('data')
@@ -60,7 +65,7 @@ describe('seasons', () => {
     })
 })
 
-describe('other apis', () => {
+describe('Other apis', () => {
     it('samples', async () => {
         const res = await fetch.samples('steam')
         expect(res).toHaveProperty('data')
