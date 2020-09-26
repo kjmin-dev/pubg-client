@@ -12,3 +12,5 @@ logs/
 __test__/
 .github/
 coverage/
+# typedoc autogen
+doc
