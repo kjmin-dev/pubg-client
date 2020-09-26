@@ -1,9 +1,26 @@
 import _fetcher from './_fetcher'
 
-interface builder {
+interface Builder_season {
+    stat(userid: string): Promise<any>
+    rankedStat(userid: string): Promise<any>
+    leaderboards(gameMode: GameMode): Promise<any>
+}
+
+interface Builder_user {
+    json(): Promise<any>
+    weapon(): Promise<any>
+    stat(seasonid: string): Promise<any>
+    rankedStat(seasonid: string): Promise<any>
+}
+
+interface Builder_platform {
+    season(_seasonid: string): Builder_season
+    user(_userid: string): Builder_user
     seasons(): Promise<any>
     players(username: string): Promise<any>
     player(userid: string): Promise<any>
+    lifetime(userid: string): Promise<any>
+    match(matchid: string): Promise<any>
 }
 
 type BigPlatform = 'steam' | 'console' | 'kakao'
@@ -39,101 +56,207 @@ type Region =
     | 'xbox-oc'
     | 'xbox-sa'
 
+type GameMode =
+    | 'solo' //1 player per team, third person perspective
+    | 'solo-fpp' //1 player per team, first person perspective
+    | 'duo' //up to 2 people per team, third person perspective
+    | 'duo-fpp' //up to 2 people per team, first person perspective
+    | 'squad' //more than 2 people per team, third person perspective
+    | 'squad-fpp' //more than 2 people per team, first person perspective
+
 class createInstance extends _fetcher {
     constructor(newKey = '') {
         super(newKey)
     }
 
     /* Functional builder */
-    public platform(_platform: Platform): builder {
+    public platform(_platform: Platform): Builder_platform {
         const context = this
         return {
+            season(_seasonid: string): Builder_season {
+                return {
+                    // platform().seasons().stat()
+                    stat(userid: string) {
+                        return context.stat(_platform, userid, _seasonid)
+                    },
+                    // platform().seasons().rankedStat()
+                    rankedStat(userid: string) {
+                        return context.rankedStat(_platform, userid, _seasonid)
+                    },
+                    // platform().seasons().leaderboards()
+                    leaderboards(gameMode: GameMode) {
+                        return context.leaderboards(
+                            _platform,
+                            _seasonid,
+                            gameMode,
+                        )
+                    },
+                }
+            },
+            user(_userid: string): Builder_user {
+                return {
+                    /**
+                     * platform().user().json()
+                     * returns api.player(userid)
+                     */
+                    json() {
+                        return context.player(_platform, _userid)
+                    },
+                    // platform().user().stat()
+                    stat(seasonid: string) {
+                        return context.stat(_platform, _userid, seasonid)
+                    },
+                    // platform().user().rankedStat()
+                    rankedStat(seasonid: string) {
+                        return context.rankedStat(_platform, _userid, seasonid)
+                    },
+                    weapon() {
+                        return context.weapon(_platform, _userid)
+                    }
+                }
+            },
+            // platform().seasons()
             seasons() {
                 return context.seasons(_platform)
             },
+            // platform().players()
             players(username: string) {
                 return context.players(_platform, username)
             },
+            // platform().player()
             player(userid: string) {
                 return context.player(_platform, userid)
             },
+            // platform().lifetime()
+            lifetime(userid: string) {
+                return context.lifetime(_platform, userid)
+            },
+            match(matchid: string) {
+                return context.match(_platform, matchid)
+            }
         }
     }
 
-    /* Find users fy name */
+    /**
+     * players: Find users fy name
+     * @param platform 
+     * @param username 
+     */
     players(platform: Platform, username: string): Promise<any> {
         return this.get(
             `/shards/${platform}/players?filter[playerNames]=${username}`,
         )
     }
 
-    /* Find user by identifier */
+    /**
+     * player: Find user by identifier
+     * @param platform 
+     * @param userid 
+     */
     player(platform: Platform, userid: string): Promise<any> {
         return this.get(`/shards/${platform}/players/${userid}`)
     }
 
-    /* Get all available seasons */
+    /**
+     * seasons: Get all available seasons
+     * @param platform 
+     */
     seasons(platform: Platform): Promise<any> {
         return this.get(`/shards/${platform}/seasons`)
     }
 
-    /* Get player's seasons */
+    /**
+     * lifetime: Get player's seasons
+     * @param platform 
+     * @param userid 
+     */
     lifetime(platform: Platform, userid: string): Promise<any> {
         return this.get(
             `/shards/${platform}/players/${userid}/seasons/lifetime`,
         )
     }
 
-    /* Get player's season stat */
-    stat(platform: Platform, userid: string, season: string): Promise<any> {
+    /**
+     * stat: Get player's season stat
+     * @param platform 
+     * @param userid 
+     * @param seasonid 
+     */
+    stat(platform: Platform, userid: string, seasonid: string): Promise<any> {
         return this.get(
-            `/shards/${platform}/players/${userid}/seasons/${season}`,
+            `/shards/${platform}/players/${userid}/seasons/${seasonid}`,
         )
     }
 
-    /* Get player's ranked season stat */
+    /**
+     * rankedStat: Get player's ranked season stat
+     * @param platform 
+     * @param userid 
+     * @param seasonid 
+     */
     rankedStat(
         platform: Platform,
         userid: string,
-        season: string,
+        seasonid: string,
     ): Promise<any> {
         return this.get(
-            `/shards/${platform}/players/${userid}/seasons/${season}/ranked`,
+            `/shards/${platform}/players/${userid}/seasons/${seasonid}/ranked`,
         )
     }
 
-    /* Get player's weapon mastery level */
+    /**
+     * weapon: Get player's weapon mastery level
+     * @param platform 
+     * @param userid 
+     */
     weapon(platform: Platform, userid: string): Promise<any> {
         return this.get(`/shards/${platform}/players/${userid}/weapon_mastery`)
     }
 
-    /* Get specific match data */
-    match(platform: Platform, matchId: string): Promise<any> {
-        return this.get(`/shards/${platform}/matches/${matchId}`)
+    /**
+     * match: Get specific match data
+     * @param platform 
+     * @param matchid 
+     */
+    match(platform: Platform, matchid: string): Promise<any> {
+        return this.get(`/shards/${platform}/matches/${matchid}`)
     }
 
-    /* Get season leaderboard of platform */
+    /**
+     * leaderboards: Get season leaderboard of platform
+     * @param platform 
+     * @param seasonid 
+     * @param gameMode 
+     */
     leaderboards(
         platform: Platform | Region,
-        seasonId: string,
-        gameMode: string,
+        seasonid: string,
+        gameMode: GameMode,
     ): Promise<any> {
         return this.get(
-            `/shards/${platform}/leaderboards/${seasonId}/${gameMode}`,
+            `/shards/${platform}/leaderboards/${seasonid}/${gameMode}`,
         )
     }
 
-    /* Get all tournaments info */
+    /**
+     * tournaments: Get all tournaments info
+     * @param tid 
+     */
     tournaments(tid = ''): Promise<any> {
         return this.get(`/tournaments/${tid}`)
     }
 
-    /* Get sample match ids */
+    /**
+     * samples: Get sample match ids
+     * @param platform 
+     */
     samples(platform: BigPlatform): Promise<any> {
         return this.get(`/shards/${platform}/samples`)
     }
 
-    /* Get API server status */
+    /**
+     * status: Get API server status
+     */
     status(): Promise<any> {
         return this.get(`/status`)
     }
