@@ -112,7 +112,7 @@ class createInstance extends _fetcher {
                     },
                     weapon() {
                         return context.weapon(_platform, _userid)
-                    }
+                    },
                 }
             },
             // platform().seasons()
@@ -133,14 +133,14 @@ class createInstance extends _fetcher {
             },
             match(matchid: string) {
                 return context.match(_platform, matchid)
-            }
+            },
         }
     }
 
     /**
      * players: Find users fy name
-     * @param platform 
-     * @param username 
+     * @param platform
+     * @param username
      */
     players(platform: Platform, username: string): Promise<any> {
         return this.get(
@@ -150,8 +150,8 @@ class createInstance extends _fetcher {
 
     /**
      * player: Find user by identifier
-     * @param platform 
-     * @param userid 
+     * @param platform
+     * @param userid
      */
     player(platform: Platform, userid: string): Promise<any> {
         return this.get(`/shards/${platform}/players/${userid}`)
@@ -159,7 +159,7 @@ class createInstance extends _fetcher {
 
     /**
      * seasons: Get all available seasons
-     * @param platform 
+     * @param platform
      */
     seasons(platform: Platform): Promise<any> {
         return this.get(`/shards/${platform}/seasons`)
@@ -167,8 +167,8 @@ class createInstance extends _fetcher {
 
     /**
      * lifetime: Get player's seasons
-     * @param platform 
-     * @param userid 
+     * @param platform
+     * @param userid
      */
     lifetime(platform: Platform, userid: string): Promise<any> {
         return this.get(
@@ -178,9 +178,9 @@ class createInstance extends _fetcher {
 
     /**
      * stat: Get player's season stat
-     * @param platform 
-     * @param userid 
-     * @param seasonid 
+     * @param platform
+     * @param userid
+     * @param seasonid
      */
     stat(platform: Platform, userid: string, seasonid: string): Promise<any> {
         return this.get(
@@ -190,9 +190,9 @@ class createInstance extends _fetcher {
 
     /**
      * rankedStat: Get player's ranked season stat
-     * @param platform 
-     * @param userid 
-     * @param seasonid 
+     * @param platform
+     * @param userid
+     * @param seasonid
      */
     rankedStat(
         platform: Platform,
@@ -206,8 +206,8 @@ class createInstance extends _fetcher {
 
     /**
      * weapon: Get player's weapon mastery level
-     * @param platform 
-     * @param userid 
+     * @param platform
+     * @param userid
      */
     weapon(platform: Platform, userid: string): Promise<any> {
         return this.get(`/shards/${platform}/players/${userid}/weapon_mastery`)
@@ -215,8 +215,8 @@ class createInstance extends _fetcher {
 
     /**
      * match: Get specific match data
-     * @param platform 
-     * @param matchid 
+     * @param platform
+     * @param matchid
      */
     match(platform: Platform, matchid: string): Promise<any> {
         return this.get(`/shards/${platform}/matches/${matchid}`)
@@ -224,9 +224,9 @@ class createInstance extends _fetcher {
 
     /**
      * leaderboards: Get season leaderboard of platform
-     * @param platform 
-     * @param seasonid 
-     * @param gameMode 
+     * @param platform
+     * @param seasonid
+     * @param gameMode
      */
     leaderboards(
         platform: Platform | Region,
@@ -240,7 +240,7 @@ class createInstance extends _fetcher {
 
     /**
      * tournaments: Get all tournaments info
-     * @param tid 
+     * @param tid
      */
     tournaments(tid = ''): Promise<any> {
         return this.get(`/tournaments/${tid}`)
@@ -248,7 +248,7 @@ class createInstance extends _fetcher {
 
     /**
      * samples: Get sample match ids
-     * @param platform 
+     * @param platform
      */
     samples(platform: BigPlatform): Promise<any> {
         return this.get(`/shards/${platform}/samples`)
