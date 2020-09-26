@@ -18,5 +18,8 @@
         "prettier",
         "prettier/@typescript-eslint"
     ],
-    "rules": {}
+    "rules": {
+        "@typescript-eslint/no-this-alias": 1,
+        "@typescript-eslint/no-explicit-any": 0
+    }
 }
