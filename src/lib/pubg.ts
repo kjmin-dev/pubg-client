@@ -9,8 +9,10 @@ class createInstance extends _fetcher {
         return this.get('/shards/pc-krjp/seasons')
     }
 
-    players(region: string, id: string): Promise<any> {
-        return this.get(`/shards/${region}/players?filter[playerNames]=${id}`)
+    players(platform: string, username: string): Promise<any> {
+        return this.get(
+            `/shards/${platform}/players?filter[playerNames]=${username}`,
+        )
     }
 }
 
