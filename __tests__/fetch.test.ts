@@ -33,16 +33,20 @@ describe('craete instance', () => {
 
 describe('player', () => {
     it('search players by name', async () => {
-        const res = await fetch.players('steam', 'leichtjoon')
+        //const res = await fetch.players('steam', 'leichtjoon')
+        const res = await fetch.platform('steam').players('leichtjoon')
         expect(res).toHaveProperty('data')
         expect(Array.isArray(res.data)).toBe(true)
         expect(res).toMatchObject(testPlayers)
     })
     it('search player by identifier', async () => {
+        /*
         const res = await fetch.player(
             'steam',
             'account.183bc4b2c3404935baf3d56fb434b393',
         )
+        */
+        const res = await fetch.platform('steam').user('account.183bc4b2c3404935baf3d56fb434b393').json()
         expect(res).toHaveProperty('data')
         expect(res).toMatchObject(testPlayer)
     })
