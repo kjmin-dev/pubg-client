@@ -1,8 +1,8 @@
 import fetcher from './fetcher'
 
 class createInstance extends fetcher {
-    constructor(newPrefix = 'https://api.pubg.com') {
-        super(newPrefix)
+    constructor(newKey = "") {
+        super(newKey)
     }
 
     seasons(): Promise<any> {

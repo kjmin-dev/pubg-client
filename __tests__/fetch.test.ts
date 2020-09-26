@@ -1,4 +1,4 @@
-import fetch from '../src'
+import fetch, { createInstance } from '../src'
 import api from './constant/api.json'
 import testPlayer from './example/player-platform.json'
 
@@ -12,6 +12,17 @@ describe('prefix and key', () => {
         expect(fetch.key).toBe(api.key)
         expect(fetch.checkKey()).toBe(true)
         expect(fetch.default_opts).toHaveProperty('headers')
+    })
+})
+
+describe('craete instance', () => {
+    it('no parameter', () => {
+        const instance = new createInstance()
+        expect(instance.key).toBe("")
+    })
+    it('with key', () => {
+        const instance = new createInstance(api.key)
+        expect(instance.key).toBe(api.key)
     })
 })
 

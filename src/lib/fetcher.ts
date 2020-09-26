@@ -6,9 +6,14 @@ class fetcher {
     private _key: string
     private _default_opts: RequestInit
 
-    constructor(newPrefix = 'https://api.pubg.com') {
-        this.prefix = newPrefix
-        this._default_opts = {}
+    constructor(newKey:string) {
+        this._key = newKey
+        this._default_opts = {
+            headers: {
+                Authorization: `Bearer ${newKey}`,
+                Accept: 'application/vnd.api+json',
+            },
+        }
     }
 
     get prefix(): string {
