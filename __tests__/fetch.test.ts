@@ -1,7 +1,11 @@
 import fetch, { createInstance } from '../src'
+
+/* example data */
 import api from './constant/api.json'
 import testPlayer from './example/player-platform.json'
 import testPlayers from './example/players-platform.json'
+import tournaments from './example/tournaments.json'
+import samples from './example/samples.json'
 
 describe('prefix and key', () => {
     it('set prefix', () => {
@@ -49,5 +53,19 @@ describe('seasons', () => {
         const res = await fetch.seasons('steam')
         expect(res).toHaveProperty('data')
         expect(Array.isArray(res.data)).toBe(true)
+    })
+})
+
+describe('other apis', () => {
+    it('samples', async () => {
+        const res = await fetch.samples('steam')
+        expect(res).toHaveProperty('data')
+        expect(res).toMatchObject(samples)
+    })
+
+    it('tournaments', async () => {
+        const res = await fetch.tournaments()
+        expect(res).toHaveProperty('data')
+        expect(res).toMatchObject(tournaments)
     })
 })
