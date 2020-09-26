@@ -42,7 +42,7 @@ You can import `pubg-client` module in two ways:
 To start, just click the **[Use template][repo-template-action]** link (or the green button). Now start adding your code in the `src` and unit tests in the `__tests__` directories.
 
 # API Documentation
-see [Generated document](https://github.com/schnellehand/pubg-client/tree/master/doc/index.html)
+see [Generated document](https://schnellehand.github.io/pubg-client/)
 # Development
 🏃🏽 pubg-client library was developed by using:
 - [TypeScript][typescript] [4.0][typescript-4-0]
