@@ -12,6 +12,9 @@
 - [Promise][promise] based API
 - All of [PUBG API][pubg_api] except [Telemetry][pubg_api_telemetry]
 
+# API Documentation
+see [Generated document](https://schnellehand.github.io/pubg-client/)
+
 # Installation
 To start, just install the `pubg-client` into your node.js project.
 
@@ -24,25 +27,65 @@ or yarn
 yarn add pubg-client
 ```
 
-# Usage
+## Import module
 You can import `pubg-client` module in two ways:
-
 1. import the module and set api key
 ```javascript
-    import api from 'pubg-client';
-    // or const api = require('pubg-client').default;
-    api.key = 'your_api_key';
+import api from 'pubg-client';
+// or const api = require('pubg-client').default;
+api.key = 'your_api_key';
 ```
 2. create new instance
 ```javascript
-    import { createInstance } from 'pubg-client';
-    // or const { createInstance } = require('pubg-client');
-    const api = new createInstance('your_api_key');
+import { createInstance } from 'pubg-client';
+// or const { createInstance } = require('pubg-client');
+const api = new createInstance('your_api_key');
 ```
-To start, just click the **[Use template][repo-template-action]** link (or the green button). Now start adding your code in the `src` and unit tests in the `__tests__` directories.
+## Set environment
+You can change API host and `gzip` compression option
+```javascript
+// change API host to your custom API server
+api.prefix = 'http://example.com'
+// enable gzip compression on response
+api.gzip = true
+// disable gzip compression on response (default value: false)
+api.gzip = false
+```
+# Usage
+## Basic API example
+### **Ex1.** Search player 'leichtjoon' in 'steam' region
+```javascript
+api.players('steam', 'leichtjoon')
+```
+### **Ex2.** Search one player by player's unique id
+```javascript
+api.player('steam', 'account.183bc4b2c3404935baf3d56fb434b393')
+```
+### **Ex3.** Get all available seasons in 'xbox' region
+```javascript
+api.seasons('xbox')
+api.seasons('kakao')
+api.seasons('console')
+api.seasons('steam')
+```
+### **Ex4.** Get seasons that player have been played
+```javascript
+api.lifetime('steam', 'account.183bc4b2c3404935baf3d56fb434b393')
+```
+### **Ex5.** Get stat of player
+```javascript
+api.stat('steam', 'account.183bc4b2c3404935baf3d56fb434b393', 'division.bro.official.pc-2018-08')
+```
+## Functional API example
+[`$platform`](https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html) and [`$user`](https://schnellehand.github.io/pubg-client/docs/interfaces/_lib_pubg_.api_user.html) properties provide API calls through functional interfaces. See [Documentation](https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html)
+```javascript
+api.$platform('steam').players('leichtjoon')
+api.$platform('steam').$user('account.183bc4b2c3404935baf3d56fb434b393').lifetime()
+```
 
-# API Documentation
-see [Generated document](https://schnellehand.github.io/pubg-client/)
+# Parameters
+The range of values of the `platform` and `region` parameters follows the official PUBG document. See [Making Requests](https://documentation.pubg.com/en/making-requests.html)
+
 # Development
 🏃🏽 pubg-client library was developed by using:
 - [TypeScript][typescript] [4.0][typescript-4-0]

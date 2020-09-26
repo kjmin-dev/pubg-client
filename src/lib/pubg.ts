@@ -1,6 +1,6 @@
 import _fetcher from './_fetcher'
 
-type BigPlatform = 'steam' | 'console' | 'kakao'
+type Sample_Platform = 'steam' | 'console' | 'kakao'
 
 type Platform =
     | 'kakao'
@@ -60,7 +60,7 @@ interface API {
         gameMode: GameMode,
     ): Promise<any>
     tournaments(tid: string): Promise<any>
-    samples(platform: BigPlatform): Promise<any>
+    samples(platform: Sample_Platform): Promise<any>
     status(): Promise<any>
 }
 
@@ -73,13 +73,14 @@ interface API_Season {
 interface API_User {
     json(): Promise<any>
     weapon(): Promise<any>
+    lifetime(): Promise<any>
     stat(seasonid: string): Promise<any>
     rankedStat(seasonid: string): Promise<any>
 }
 
 interface API_Platform {
-    season(_seasonid: string): API_Season
-    user(_userid: string): API_User
+    $season(_seasonid: string): API_Season
+    $user(_userid: string): API_User
     seasons(): Promise<any>
     players(username: string): Promise<any>
     player(userid: string): Promise<any>
@@ -205,7 +206,7 @@ class createInstance extends _fetcher implements API {
      * samples: Get sample match ids
      * @param platform
      */
-    samples(platform: BigPlatform): Promise<any> {
+    samples(platform: Sample_Platform): Promise<any> {
         return this.get(`/shards/${platform}/samples`)
     }
 
@@ -220,7 +221,7 @@ class createInstance extends _fetcher implements API {
      * Functional builder
      *  */
     /* entry: platform() */
-    public platform(_platform: Platform): API_Platform {
+    public $platform(_platform: Platform): API_Platform {
         const context = this
         return {
             // platform().seasons()
@@ -244,7 +245,7 @@ class createInstance extends _fetcher implements API {
             },
 
             /* entry: playform().season() */
-            season(_seasonid: string): API_Season {
+            $season(_seasonid: string): API_Season {
                 return {
                     // platform().seasons().stat()
                     stat(userid: string) {
@@ -265,7 +266,7 @@ class createInstance extends _fetcher implements API {
                 }
             },
             // entry: platform().user()
-            user(_userid: string): API_User {
+            $user(_userid: string): API_User {
                 return {
                     /**
                      * platform().user().json()
@@ -281,6 +282,9 @@ class createInstance extends _fetcher implements API {
                     // platform().user().rankedStat()
                     rankedStat(seasonid: string) {
                         return context.rankedStat(_platform, _userid, seasonid)
+                    },
+                    lifetime() {
+                        return context.lifetime(_platform, _userid)
                     },
                     weapon() {
                         return context.weapon(_platform, _userid)

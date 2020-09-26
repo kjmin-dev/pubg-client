@@ -32,7 +32,7 @@
         "test": "jest --coverage",
         "test:watch": "jest --watch",
         "precommit": "yarn prettier && yarn lint",
-        "doc": "typedoc --out docs src"
+        "doc": "typedoc --out docs src && touch docs/.nojekyll"
     },
     "author": "schnellehand <kjmin@kjmin.io>",
     "license": "MIT",
