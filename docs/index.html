@@ -119,37 +119,37 @@ api.gzip = <span class="hljs-literal">false</span></code></pre>
 						<a href="#ex1-search-player-39leichtjoon39-in-39steam39-region" id="ex1-search-player-39leichtjoon39-in-39steam39-region" style="color: inherit; text-decoration: none;">
 							<h3><strong>Ex1.</strong> Search player &#39;leichtjoon&#39; in &#39;steam&#39; region</h3>
 						</a>
-						<pre><code class="language-javascript">api.players(<span class="hljs-string">&#x27;steam&#x27;</span>, <span class="hljs-string">&#x27;leichtjoon&#x27;</span>)</code></pre>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.players(<span class="hljs-string">&#x27;steam&#x27;</span>, <span class="hljs-string">&#x27;leichtjoon&#x27;</span>)</code></pre>
 						<a href="#ex2-search-one-player-by-player39s-unique-id" id="ex2-search-one-player-by-player39s-unique-id" style="color: inherit; text-decoration: none;">
 							<h3><strong>Ex2.</strong> Search one player by player&#39;s unique id</h3>
 						</a>
-						<pre><code class="language-javascript">api.player(<span class="hljs-string">&#x27;steam&#x27;</span>, <span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>)</code></pre>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.player(<span class="hljs-string">&#x27;steam&#x27;</span>, <span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>)</code></pre>
 						<a href="#ex3-get-all-available-seasons-in-39xbox39-region" id="ex3-get-all-available-seasons-in-39xbox39-region" style="color: inherit; text-decoration: none;">
 							<h3><strong>Ex3.</strong> Get all available seasons in &#39;xbox&#39; region</h3>
 						</a>
-						<pre><code class="language-javascript">api.seasons(<span class="hljs-string">&#x27;xbox&#x27;</span>)
-api.seasons(<span class="hljs-string">&#x27;kakao&#x27;</span>)
-api.seasons(<span class="hljs-string">&#x27;console&#x27;</span>)
-api.seasons(<span class="hljs-string">&#x27;steam&#x27;</span>)</code></pre>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.seasons(<span class="hljs-string">&#x27;xbox&#x27;</span>)
+<span class="hljs-comment">// api.seasons(&#x27;kakao&#x27;)</span>
+<span class="hljs-comment">// api.seasons(&#x27;console&#x27;)</span>
+<span class="hljs-comment">// api.seasons(&#x27;steam&#x27;)</span></code></pre>
 						<a href="#ex4-get-seasons-that-player-have-been-played" id="ex4-get-seasons-that-player-have-been-played" style="color: inherit; text-decoration: none;">
 							<h3><strong>Ex4.</strong> Get seasons that player have been played</h3>
 						</a>
-						<pre><code class="language-javascript">api.lifetime(<span class="hljs-string">&#x27;steam&#x27;</span>, <span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>)</code></pre>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.lifetime(<span class="hljs-string">&#x27;steam&#x27;</span>, <span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>)</code></pre>
 						<a href="#ex5-get-stat-of-player" id="ex5-get-stat-of-player" style="color: inherit; text-decoration: none;">
 							<h3><strong>Ex5.</strong> Get stat of player</h3>
 						</a>
-						<pre><code class="language-javascript">api.stat(<span class="hljs-string">&#x27;steam&#x27;</span>, <span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>, <span class="hljs-string">&#x27;division.bro.official.pc-2018-08&#x27;</span>)</code></pre>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.stat(<span class="hljs-string">&#x27;steam&#x27;</span>, <span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>, <span class="hljs-string">&#x27;division.bro.official.pc-2018-08&#x27;</span>)</code></pre>
 						<a href="#functional-api-example" id="functional-api-example" style="color: inherit; text-decoration: none;">
 							<h2>Functional API example</h2>
 						</a>
-						<a href="https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html"><code>$platform</code></a> and <a href="https://schnellehand.github.io/pubg-client/docs/interfaces/_lib_pubg_.api_user.html"><code>$user</code></a> properties provide API calls through functional interfaces. See <a href="https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html">Documentation</a><pre><code class="language-javascript">api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).players(<span class="hljs-string">&#x27;leichtjoon&#x27;</span>)
-api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).$user(<span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>).lifetime()</code></pre>
+						<a href="https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html"><code>$platform</code></a> and <a href="https://schnellehand.github.io/pubg-client/docs/interfaces/_lib_pubg_.api_user.html"><code>$user</code></a> properties provide API calls through functional interfaces. See <a href="https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html">Documentation</a><pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).players(<span class="hljs-string">&#x27;leichtjoon&#x27;</span>)
+<span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).$user(<span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>).lifetime()</code></pre>
 					</li>
 				</ol>
 				<a href="#parameters" id="parameters" style="color: inherit; text-decoration: none;">
 					<h1>Parameters</h1>
 				</a>
-				<p>The range of values of the <code>platform</code> and <code>region</code> parameters follows the official PUBG document. See <a href="https://documentation.pubg.com/en/making-requests.html">Making Requests</a></p>
+				<p>The range of values of the <code>platform</code> and <code>region</code> parameters follows the official PUBG document. See <a href="https://documentation.pubg.com/en/making-requests.html#platforms-and-regions">Making Requests</a></p>
 				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
 					<h1>Development</h1>
 				</a>

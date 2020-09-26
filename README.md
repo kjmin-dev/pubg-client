@@ -55,36 +55,36 @@ api.gzip = false
 ## Basic API example
 ### **Ex1.** Search player 'leichtjoon' in 'steam' region
 ```javascript
-api.players('steam', 'leichtjoon')
+const res = await api.players('steam', 'leichtjoon')
 ```
 ### **Ex2.** Search one player by player's unique id
 ```javascript
-api.player('steam', 'account.183bc4b2c3404935baf3d56fb434b393')
+const res = await api.player('steam', 'account.183bc4b2c3404935baf3d56fb434b393')
 ```
 ### **Ex3.** Get all available seasons in 'xbox' region
 ```javascript
-api.seasons('xbox')
-api.seasons('kakao')
-api.seasons('console')
-api.seasons('steam')
+const res = await api.seasons('xbox')
+// api.seasons('kakao')
+// api.seasons('console')
+// api.seasons('steam')
 ```
 ### **Ex4.** Get seasons that player have been played
 ```javascript
-api.lifetime('steam', 'account.183bc4b2c3404935baf3d56fb434b393')
+const res = await api.lifetime('steam', 'account.183bc4b2c3404935baf3d56fb434b393')
 ```
 ### **Ex5.** Get stat of player
 ```javascript
-api.stat('steam', 'account.183bc4b2c3404935baf3d56fb434b393', 'division.bro.official.pc-2018-08')
+const res = await api.stat('steam', 'account.183bc4b2c3404935baf3d56fb434b393', 'division.bro.official.pc-2018-08')
 ```
 ## Functional API example
 [`$platform`](https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html) and [`$user`](https://schnellehand.github.io/pubg-client/docs/interfaces/_lib_pubg_.api_user.html) properties provide API calls through functional interfaces. See [Documentation](https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html)
 ```javascript
-api.$platform('steam').players('leichtjoon')
-api.$platform('steam').$user('account.183bc4b2c3404935baf3d56fb434b393').lifetime()
+const res = await api.$platform('steam').players('leichtjoon')
+const res = await api.$platform('steam').$user('account.183bc4b2c3404935baf3d56fb434b393').lifetime()
 ```
 
 # Parameters
-The range of values of the `platform` and `region` parameters follows the official PUBG document. See [Making Requests](https://documentation.pubg.com/en/making-requests.html)
+The range of values of the `platform` and `region` parameters follows the official PUBG document. See [Making Requests](https://documentation.pubg.com/en/making-requests.html#platforms-and-regions)
 
 # Development
 🏃🏽 pubg-client library was developed by using:
