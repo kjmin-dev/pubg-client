@@ -1,0 +1,56 @@
+{
+    "data": [
+        {
+            "type": "season",
+            "id": "division.bro.official.console-03",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-04",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-05",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-06",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-07",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-08",
+            "attributes": {
+                "isCurrentSeason": true,
+                "isOffseason": false
+            }
+        }
+    ],
+    "links": {
+        "self": "https://api.pubg.com/shards/console/seasons"
+    },
+    "meta": {}
+}

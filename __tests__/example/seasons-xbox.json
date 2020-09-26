@@ -1,0 +1,112 @@
+{
+    "data": [
+        {
+            "type": "season",
+            "id": "division.bro.official.2018-05",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.2018-06",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.2018-07",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.2018-08",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.xbox-01",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.xbox-02",
+            "attributes": {
+                "isOffseason": false,
+                "isCurrentSeason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-03",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-04",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-05",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-06",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-07",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.console-08",
+            "attributes": {
+                "isCurrentSeason": true,
+                "isOffseason": false
+            }
+        },
+        {
+            "type": "season",
+            "id": "division.bro.official.xb-pre1",
+            "attributes": {
+                "isCurrentSeason": false,
+                "isOffseason": false
+            }
+        }
+    ],
+    "links": {
+        "self": "https://api.pubg.com/shards/xbox/seasons"
+    },
+    "meta": {}
+}

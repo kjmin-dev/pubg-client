@@ -36,7 +36,7 @@ class createInstance extends _fetcher {
         }
     }
 
-    /* Get all seasons */
+    /* Get all available seasons */
     seasons(platform: Platform): Promise<any> {
         return this.get(`/shards/${platform}/seasons`)
     }
