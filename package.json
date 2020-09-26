@@ -5,6 +5,7 @@
     "engines": {
         "node": ">= 12"
     },
+    "main": "build/index.js",
     "devDependencies": {
         "@types/jest": "^26.0.14",
         "@types/node": "^14.11.1",
