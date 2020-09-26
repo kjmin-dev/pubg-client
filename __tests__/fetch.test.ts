@@ -17,8 +17,7 @@ describe('prefix and key', () => {
 
 describe('player', () => {
     it('search player returned data', async () => {
-        const res = await fetch.player('steam', 'leichtjoon')
-        //const res = await fetch.get("/shards/steam/players?filter[playerNames]=leichtjoon")
+        const res = await fetch.players('steam', 'leichtjoon')
         expect(res).toHaveProperty('data')
         expect(Array.isArray(res.data)).toBe(true)
         expect(res).toMatchObject(testPlayer)
