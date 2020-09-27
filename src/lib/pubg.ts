@@ -62,6 +62,7 @@ interface API {
     tournaments(tid: string): Promise<any>
     samples(platform: Sample_Platform): Promise<any>
     status(): Promise<any>
+    $platform(_platform: string): API_Platform
 }
 
 interface API_Season {
@@ -86,6 +87,7 @@ interface API_Platform {
     player(userid: string): Promise<any>
     lifetime(userid: string): Promise<any>
     match(matchid: string): Promise<any>
+    weapon(userid: string): Promise<any>
 }
 
 class createInstance extends _fetcher implements API {
@@ -221,7 +223,7 @@ class createInstance extends _fetcher implements API {
      * Functional builder
      *  */
     /* entry: platform() */
-    public $platform(_platform: Platform): API_Platform {
+    $platform(_platform: Platform): API_Platform {
         const context = this
         return {
             // platform().seasons()
@@ -243,7 +245,9 @@ class createInstance extends _fetcher implements API {
             match(matchid: string) {
                 return context.match(_platform, matchid)
             },
-
+            weapon(userid: string) {
+                return context.weapon(_platform, userid)
+            },
             /* entry: playform().season() */
             $season(_seasonid: string): API_Season {
                 return {

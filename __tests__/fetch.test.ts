@@ -4,7 +4,6 @@ import fetch, { createInstance } from '../src'
 import api from './constant/api.json'
 import testPlayer from './example/player-platform.json'
 import testPlayers from './example/players-platform.json'
-import samples from './example/samples.json'
 
 describe('Environments', () => {
     it('set prefix', () => {
@@ -71,7 +70,7 @@ describe('Other apis', () => {
     it('samples', async () => {
         const res = await fetch.samples('steam')
         expect(res).toHaveProperty('data')
-        expect(res).toMatchObject(samples)
+        expect(Array.isArray(res.data.relationships.matches.data)).toBe(true)
     })
 
     it('tournaments', async () => {

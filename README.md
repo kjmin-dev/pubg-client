@@ -68,19 +68,39 @@ const res = await api.seasons('xbox')
 // api.seasons('console')
 // api.seasons('steam')
 ```
-### **Ex4.** Get seasons that player have been played
+### **Ex4.** Get player's lifetime stat
 ```javascript
 const res = await api.lifetime('steam', 'account.183bc4b2c3404935baf3d56fb434b393')
 ```
-### **Ex5.** Get stat of player
+### **Ex5.** Get season stat of player
 ```javascript
 const res = await api.stat('steam', 'account.183bc4b2c3404935baf3d56fb434b393', 'division.bro.official.pc-2018-08')
 ```
+### **Ex6.** Get leaderboard of season
+```javascript
+const res = await api.leaderboards('pc-krjp', 'division.bro.official.pc-2018-08', 'solo')
+```
 ## Functional API example
-[`$platform`](https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html) and [`$user`](https://schnellehand.github.io/pubg-client/docs/interfaces/_lib_pubg_.api_user.html) properties provide API calls through functional interfaces. See [Documentation](https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html)
+[`$platform`](https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html) and [`$user`](https://schnellehand.github.io/pubg-client/docs/interfaces/_lib_pubg_.api_user.html) properties provide API calls through functional interfaces. See [Documentation](https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_platform.html)
+### **Ex1.** Search player 'leichtjoon' in 'steam' region
 ```javascript
 const res = await api.$platform('steam').players('leichtjoon')
+```
+### **Ex2.** Get match data
+```javascript
+const res = await api.$platform('steam').match('f7d6e66d-6fab-42ee-82cd-65650251ca29')
+```
+### **Ex3.** Search one player by player's unique id
+```javascript
+const res = await api.$platform('steam').$user('account.183bc4b2c3404935baf3d56fb434b393').json()
+```
+### **Ex4.** Get player's lifetime stat
+```javascript
 const res = await api.$platform('steam').$user('account.183bc4b2c3404935baf3d56fb434b393').lifetime()
+```
+### **Ex5.** Get season stat of player
+```javascript
+const res = await api.$platform('steam').$user('account.183bc4b2c3404935baf3d56fb434b393').stat('division.bro.official.pc-2018-08')
 ```
 
 # Parameters

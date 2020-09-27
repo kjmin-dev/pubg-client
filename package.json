@@ -1,6 +1,6 @@
 {
     "name": "pubg-client",
-    "version": "0.0.1-beta.2",
+    "version": "0.0.1-beta.3",
     "description": "Asnychronous typescript wrapper for official PUBG API",
     "keywords": [
         "pubg",

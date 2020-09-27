@@ -131,19 +131,42 @@ api.gzip = <span class="hljs-literal">false</span></code></pre>
 <span class="hljs-comment">// api.seasons(&#x27;kakao&#x27;)</span>
 <span class="hljs-comment">// api.seasons(&#x27;console&#x27;)</span>
 <span class="hljs-comment">// api.seasons(&#x27;steam&#x27;)</span></code></pre>
-						<a href="#ex4-get-seasons-that-player-have-been-played" id="ex4-get-seasons-that-player-have-been-played" style="color: inherit; text-decoration: none;">
-							<h3><strong>Ex4.</strong> Get seasons that player have been played</h3>
+						<a href="#ex4-get-player39s-lifetime-stat" id="ex4-get-player39s-lifetime-stat" style="color: inherit; text-decoration: none;">
+							<h3><strong>Ex4.</strong> Get player&#39;s lifetime stat</h3>
 						</a>
 						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.lifetime(<span class="hljs-string">&#x27;steam&#x27;</span>, <span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>)</code></pre>
-						<a href="#ex5-get-stat-of-player" id="ex5-get-stat-of-player" style="color: inherit; text-decoration: none;">
-							<h3><strong>Ex5.</strong> Get stat of player</h3>
+						<a href="#ex5-get-season-stat-of-player" id="ex5-get-season-stat-of-player" style="color: inherit; text-decoration: none;">
+							<h3><strong>Ex5.</strong> Get season stat of player</h3>
 						</a>
 						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.stat(<span class="hljs-string">&#x27;steam&#x27;</span>, <span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>, <span class="hljs-string">&#x27;division.bro.official.pc-2018-08&#x27;</span>)</code></pre>
+						<a href="#ex6-get-leaderboard-of-season" id="ex6-get-leaderboard-of-season" style="color: inherit; text-decoration: none;">
+							<h3><strong>Ex6.</strong> Get leaderboard of season</h3>
+						</a>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.leaderboards(<span class="hljs-string">&#x27;pc-krjp&#x27;</span>, <span class="hljs-string">&#x27;division.bro.official.pc-2018-08&#x27;</span>, <span class="hljs-string">&#x27;solo&#x27;</span>)</code></pre>
 						<a href="#functional-api-example" id="functional-api-example" style="color: inherit; text-decoration: none;">
 							<h2>Functional API example</h2>
 						</a>
-						<a href="https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html"><code>$platform</code></a> and <a href="https://schnellehand.github.io/pubg-client/docs/interfaces/_lib_pubg_.api_user.html"><code>$user</code></a> properties provide API calls through functional interfaces. See <a href="https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html">Documentation</a><pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).players(<span class="hljs-string">&#x27;leichtjoon&#x27;</span>)
-<span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).$user(<span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>).lifetime()</code></pre>
+						<a href="https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_season.html"><code>$platform</code></a> and <a href="https://schnellehand.github.io/pubg-client/docs/interfaces/_lib_pubg_.api_user.html"><code>$user</code></a> properties provide API calls through functional interfaces. See <a href="https://schnellehand.github.io/pubg-client/interfaces/_lib_pubg_.api_platform.html">Documentation</a>
+						<a href="#ex1-search-player-39leichtjoon39-in-39steam39-region-1" id="ex1-search-player-39leichtjoon39-in-39steam39-region-1" style="color: inherit; text-decoration: none;">
+							<h3><strong>Ex1.</strong> Search player &#39;leichtjoon&#39; in &#39;steam&#39; region</h3>
+						</a>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).players(<span class="hljs-string">&#x27;leichtjoon&#x27;</span>)</code></pre>
+						<a href="#ex2-get-match-data" id="ex2-get-match-data" style="color: inherit; text-decoration: none;">
+							<h3><strong>Ex2.</strong> Get match data</h3>
+						</a>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).match(<span class="hljs-string">&#x27;f7d6e66d-6fab-42ee-82cd-65650251ca29&#x27;</span>)</code></pre>
+						<a href="#ex3-search-one-player-by-player39s-unique-id" id="ex3-search-one-player-by-player39s-unique-id" style="color: inherit; text-decoration: none;">
+							<h3><strong>Ex3.</strong> Search one player by player&#39;s unique id</h3>
+						</a>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).$user(<span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>).json()</code></pre>
+						<a href="#ex4-get-player39s-lifetime-stat-1" id="ex4-get-player39s-lifetime-stat-1" style="color: inherit; text-decoration: none;">
+							<h3><strong>Ex4.</strong> Get player&#39;s lifetime stat</h3>
+						</a>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).$user(<span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>).lifetime()</code></pre>
+						<a href="#ex5-get-season-stat-of-player-1" id="ex5-get-season-stat-of-player-1" style="color: inherit; text-decoration: none;">
+							<h3><strong>Ex5.</strong> Get season stat of player</h3>
+						</a>
+						<pre><code class="language-javascript"><span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> api.$platform(<span class="hljs-string">&#x27;steam&#x27;</span>).$user(<span class="hljs-string">&#x27;account.183bc4b2c3404935baf3d56fb434b393&#x27;</span>).stat(<span class="hljs-string">&#x27;division.bro.official.pc-2018-08&#x27;</span>)</code></pre>
 					</li>
 				</ol>
 				<a href="#parameters" id="parameters" style="color: inherit; text-decoration: none;">
