@@ -44,7 +44,7 @@ type GameMode =
 interface API {
     players(platform: Platform, username: string): Promise<any>
     player(platform: Platform, userid: string): Promise<any>
-    seasons(platform: Platform): Promise<string>
+    seasons(platform: Platform): Promise<any>
     lifetime(platform: Platform, userid: string): Promise<any>
     stat(platform: Platform, userid: string, seasonid: string): Promise<any>
     rankedStat(
