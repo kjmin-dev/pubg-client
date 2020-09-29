@@ -13,4 +13,4 @@ __test__/
 .github/
 coverage/
 # typedoc autogen
-docs
+docs/
